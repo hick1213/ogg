@@ -27,6 +27,9 @@ for ABI in "${ABIS[@]}"; do
 
     # Create a subdirectory for each ABI
     ABI_BUILD_DIR="${BUILD_DIR}/${ABI}"
+
+    rm -rf $ABI_BUILD_DIR
+
     mkdir -p $ABI_BUILD_DIR
 
     # Configure the build for the current ABI
